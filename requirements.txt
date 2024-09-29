@@ -1,0 +1,9 @@
+streamlit
+transformers
+pymupdf
+langdetect
+easyocr
+Pillow
+numpy
+sacremoses
+sentencepiece
