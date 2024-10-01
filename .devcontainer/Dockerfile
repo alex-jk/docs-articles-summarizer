@@ -5,7 +5,7 @@ FROM python:3.9
 WORKDIR /workspace
 
 # Copy requirements file into the container
-COPY requirements.txt .
+COPY ../requirements.txt .
 
 # Install any dependencies in the requirements.txt file
 RUN pip install --upgrade pip

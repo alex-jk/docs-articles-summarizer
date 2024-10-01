@@ -7,11 +7,11 @@
         "vscode": {
             "extensions": [
                 "ms-python.python" // Automatically installs the Python extension in VS Code
-            ]
+            ],
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "bash" // Sets default terminal to bash
+            }
         }
     },
-    "postCreateCommand": "pip install -r requirements.txt",
-    "settings": {
-        "terminal.integrated.defaultProfile.linux": "bash" // Sets default terminal to bash
-    }
+    "postCreateCommand": "pip install -r requirements.txt"
 }
