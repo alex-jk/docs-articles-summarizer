@@ -1,15 +1,16 @@
 {
     "name": "Docs Articles Summarizer Environment",
     "build": {
-        "dockerfile": "Dockerfile"
+        "context": ".", // Set the context to the root (current directory)
+        "dockerfile": "Dockerfile" // Reference Dockerfile in the root
     },
     "customizations": {
         "vscode": {
             "extensions": [
-                "ms-python.python" // Automatically installs the Python extension in VS Code
+                "ms-python.python"
             ],
             "settings": {
-                "terminal.integrated.defaultProfile.linux": "bash" // Sets default terminal to bash
+                "terminal.integrated.defaultProfile.linux": "bash"
             }
         }
     },

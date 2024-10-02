@@ -1,15 +1,19 @@
-# Use an official Python image from the Docker Hub
+# Use an official Python runtime as a parent image
 FROM python:3.9
 
 # Set the working directory in the container
 WORKDIR /workspace
 
-# Copy requirements file into the container
-COPY ../requirements.txt .
+# Copy all files in the project directory to the container’s working directory
+COPY . /workspace
 
-# Install any dependencies in the requirements.txt file
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
+# Install any needed packages specified in requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Install additional dependencies for language support
+RUN apt-get update && apt-get install -y \
+    libgl1-mesa-glx \
+    libglib2.0-0
 
 # Make sure the installed packages are available globally
 ENV PATH="/root/.local/bin:${PATH}"
