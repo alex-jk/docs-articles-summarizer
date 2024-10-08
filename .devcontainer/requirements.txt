@@ -7,3 +7,5 @@ Pillow
 numpy
 sacremoses
 sentencepiece
+pdfplumber
+
