@@ -6,6 +6,8 @@ WORKDIR /workspace
 
 # Copy all files in the project directory to the container’s working directory
 COPY . /workspace
+# Print the contents of the requirements.txt file to verify it exists in the container
+RUN cat /workspace/requirements.txt
 
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
