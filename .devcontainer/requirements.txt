@@ -8,4 +8,4 @@ numpy
 sacremoses
 sentencepiece
 pdfplumber
-
+ipykernel
