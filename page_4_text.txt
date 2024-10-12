@@ -1,1 +1,26 @@
-488 GabrielDeVeaugh-GeissJ,AscherJ,BrookS,CedroneJ,EarlN,EmsleyR, National Institute of Mental Health. 1970. CGI: Clinica GlobalFrangouS,HuffmanR.2000.Safetyandtolerabilityoflamotrigine Impression. In: Guy W, Bonato RR, editors. Manual for theincontrolledmonotherapytrialsinmooddisorders.Presentedat ECDEU assessment battery. 2nd rev. ed. Chevy Chase, MD:the 39th Annual ACNP Meeting, December 10–14, San Juan, Author.p12-1–12-6.PuertoRico. NormannC,HummelB,ScharerLO,HornM,GrunzeH,WaldenGoodwin GM, Bowden CL, Calabrese JR, Grunze H, Kasper S, J.2002.Lamotrigineasadjuncttoparoxetineinacutedepression:White R, Greene P, Leadbetter R. 2004. A pooled analysis of A placebo-controlled, double-blind study. J Clin Psychiatry 63:two placebo-controlled 18-month trials of lamotrigine and 337–344.lithium maintenance in bipolar I disorder. J Clin Psychiatry 65: ReimersA,SkogvollE,SundJK,SpigsetO.2005.Druginteractions432–441. between lamotrigine and psychoactive drugs: Evidence from aLaurenza A, Asnis G, Beaman M. 1999. A double-blind placebo therapeuticdrugmonitoringservice.JClinPsychopharmacol25:controlledstudysupportingtheefficacyoflamotrigineinunipolar 342–348.depression.BipolarDisorder1:39–40. Rocha FL, Hara C. 2003. Lamotrigine augmentation in unipolarLondborg PD, Cutler NR, Cunningham LA, Haines FX, Pahl JJ, depression.IntClinPsychopharmacol18:97–99.WestSA.1999.Adouble-blind,placebo-controlledstudysupport- SheehanDV,JanavsJ,BakerR(UniversityofSouthFlorida,Tampa),ing the efficacy of lamotrigine in unipolar depression. Poster Lecrubier Y, Hergueta T, Weiller E (INSERM, Paris, France),presentedattheAmericanPsychiatricAssociationAnnualMeeting, Proeschel T. M.I.N.I. SCREEN 5.0.0/English version/DSM-IVMay15–20,Washington,DC.(SCAA2011[613]). 1/1/05. r 2001–2005 Sheehan DV and Lecrubier Y. All rightsLuborskyL.1962.Clinician’sjudgmentofmentalhealth.ArchGen reserved.Psychiatry7:407–417. Thase ME, Rush AJ. 1997. When at first you don’t succeed:MontgomerySA,A˚sbergM.1979.Anewdepressionscaledesigned Sequential strategies for antidepressant nonresponders. J Clintobesensitivetochange.BrJPsychiatry134:382–389. Psychiatry58(Suppl13):23–29.DepressionandAnxietyDOI10.1002/da
+488Gabriel
+DeVeaugh-GeissJ,AscherJ,BrookS,CedroneJ,EarlN,EmsleyR, NationalInstituteofMentalHealth.1970.CGI:ClinicaGlobal
+FrangouS,HuffmanR.2000.Safetyandtolerabilityoflamotrigine Impression.In:GuyW,BonatoRR,editors.Manualforthe
+incontrolledmonotherapytrialsinmooddisorders.Presentedat ECDEUassessmentbattery.2ndrev.ed.ChevyChase,MD:
+the39thAnnualACNPMeeting,December10–14,SanJuan, Author.p12-1–12-6.
+PuertoRico.NormannC,HummelB,ScharerLO,HornM,GrunzeH,Walden
+GoodwinGM,BowdenCL,CalabreseJR,GrunzeH,KasperS, J.2002.Lamotrigineasadjuncttoparoxetineinacutedepression:
+WhiteR,GreeneP,LeadbetterR.2004.Apooledanalysisof Aplacebo-controlled,double-blindstudy.JClinPsychiatry63:
+twoplacebo-controlled18-monthtrialsoflamotrigineand 337–344.
+lithiummaintenanceinbipolarIdisorder.JClinPsychiatry65: ReimersA,SkogvollE,SundJK,SpigsetO.2005.Druginteractions
+432–441. betweenlamotrigineandpsychoactivedrugs:Evidencefroma
+LaurenzaA,AsnisG,BeamanM.1999.Adouble-blindplacebo therapeuticdrugmonitoringservice.JClinPsychopharmacol25:
+controlledstudysupportingtheefficacyoflamotrigineinunipolar342–348.
+depression.BipolarDisorder1:39–40. RochaFL,HaraC.2003.Lamotrigineaugmentationinunipolar
+LondborgPD,CutlerNR,CunninghamLA,HainesFX,PahlJJ, depression.IntClinPsychopharmacol18:97–99.
+WestSA.1999.Adouble-blind,placebo-controlledstudysupport-SheehanDV,JanavsJ,BakerR(UniversityofSouthFlorida,Tampa),
+ingtheefficacyoflamotrigineinunipolardepression.Poster LecrubierY,HerguetaT,WeillerE(INSERM,Paris,France),
+presentedattheAmericanPsychiatricAssociationAnnualMeeting, ProeschelT.M.I.N.I.SCREEN5.0.0/Englishversion/DSM-IV
+r
+May15–20,Washington,DC.(SCAA2011[613]). 1/1/05. 2001–2005SheehanDVandLecrubierY.Allrights
+LuborskyL.1962.Clinician’sjudgmentofmentalhealth.ArchGenreserved.
+Psychiatry7:407–417. ThaseME,RushAJ.1997.Whenatfirstyoudon’tsucceed:
+MontgomerySA,A˚sbergM.1979.Anewdepressionscaledesigned
+Sequentialstrategiesfor antidepressant nonresponders.J Clin
+tobesensitivetochange.BrJPsychiatry134:382–389.Psychiatry58(Suppl13):23–29.
+DepressionandAnxietyDOI10.1002/da
