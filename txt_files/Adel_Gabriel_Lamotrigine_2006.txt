@@ -1,0 +1,210 @@
+Adjunctive treatment of lamotrigine compared to other antidepressants in the
+treatment of partially responsive, poorly functioning patients with unipolar
+depression was assessed. Fourteen consenting patients with confirmed DSM-IVR
+diagnosis of unipolar depression were identified as treatment resistant. All
+patients failed at least two 8-week treatment trials with antidepressants. All
+were treated with lamotrigine as an adjunct to other antidepressants for at least
+6 months. The primary effectiveness measure was the Clinical Global
+Impression Severity subscale (CGI-S). Other scales included the Montgomery–
+Asberg Depression Scale (MADRS) and the Global Assessment of Functioning
+Scale (GAF). Monitoring for skin rashes, headache, dizziness, somnolence, and
+gastrointestinal disturbances was carried out to assess for adverse events.
+Baseline measures prior to adding lamotrigine were compared to those at 8
+weeks and 6 months with adjunctive treatment. Twelve patients of the total
+(n514) completed the trial, and two discontinued treatment. There was
+significant, rapid, and robust resolution in symptoms in all effectiveness
+measures, including the core symptoms of depression, as shown by the changes
+from baseline in CGI-S, and MADRS at 8 weeks. Social and occupational
+functioning was significantly improved at 6 months. Eight patients returned to
+gainful employment or started schooling. Patients tolerated the adjunctive
+lamotrigine treatment well. Lamotrigine may have antidepressant properties
+in patients with unipolar depression and may have an earlier onset of action
+when given in combination with antidepressants. Depression and Anxiety.
+INTRODUCTION
+Interest in lamotrigine’s possible efficacy in the
+treatment of mood disorders arose from epilepsy
+studies that described improved mood and quality of
+life unrelated to seizure control [Barbosa et al., 2003].
+The first placebo-controlled, randomized study of
+lamotrigine as maintenance treatment demonstrated
+statistical differences in relapse rates between lamotrigine
+and placebo at 6 month in patients with rapidcycling
+bipolar disorder [Calabrese et al., 2000].
+In a pooled analysis of two large maintenance studies,
+lamotrigine was found to be effective against depression
+and mania, with more robust activity against
+depression than lithium in patients with bipolar
+disorders, and lithium was found to be more effective
+against mania [Bowden et al., 2003; Calabrese et al.,
+2003; Goodwin et al., 2004].
+A small number of reports suggest some efficacy
+of lamotrigine in unipolar depression. For example, in
+a retrospective chart review (n537), Barbee and
+Jamhour [2002] found that 48.4% of patients with
+recurrent, resistant major depression were rated much or very much improved upon completing a 6-week
+lamotrigine augmentation trial. Two small, placebocontrolled
+trials also provide evidence for the antidepressant
+efficacy of lamotrigine. In the first controlled
+trial (n523), lamotrigine was superior to
+placebo in patients receiving fluoxetine for resistant
+depression. Patients were treated with fluoxetine,
+20 mg/day, and concomitantly randomly assigned to
+receive either lamotrigine or placebo for 6 weeks. Both
+patients with major depressive disorder and bipolar II
+disorder were enrolled in the study. Clinical Global
+Impression Severity scale (CGI-S) scores improved in
+patients with major depressive disorder and those with
+bipolar II disorder in the lamotrigine-treated group
+[Barbosa et al., 2003]. In the second randomized,
+placebo-controlled study, lamotrigine was studied in
+patients (n540) with nonresistant unipolar depression.
+All patients were treated with paroxetine. However the
+paroxetine–lamotrigine adjunctive group demonstrated
+more significant improvement on core depressive
+symptoms as reflected by Hamilton Depression Scale
+(HAM-D) items for depressed mood, guilt feelings,
+work, and interest [Normann et al., 2002]. Also in a
+more recent retrospective chart review of the efficacy
+and tolerability of lamotrigine as an augmentation drug
+in treatment-resistant unipolar depression, 76% of
+patients (n525) were rated as improved [Rocha and
+Hara, 2003]. Lamotrigine was, however, evaluated for
+its antidepressant efficacy and safety in unipolar
+depression in a number of GlaxoSmithKline-sponsored,
+multicenter, placebo-controlled, randomized
+trials. Although some of these trials reported that
+patients on lamotrigine experienced more improvement,
+the differences between lamotrigine and placebo
+were not statistically significant on any of the efficacy
+measures used [DeVeaugh-Geiss et al., 2000; Laurenza
+et al., 1999; Londborg et al., 1999].
+Tolerability and safety of lamotrigine has been
+established in at least eight placebo-controlled clinical
+trials, with an adverse-event profile generally comparable
+with that of placebo, when it is used as
+monotherapy or as an adjunctive therapy. Serious rash
+occurred rarely (0.1% incidence), and headaches was
+the commonest side effect [Goodwin et al., 2004].
+Lamotrigine can be safely combined with most
+psychotropic drugs [Reimers et al., 2005].
+METHODS
+Fourteen patients, both males and females between
+ages 18 and 65, with DSM-IV-R diagnosis of unipolar
+depression were included in the study. Diagnosis was
+confirmed by the Mini-International Neuropsychiatric
+Interview [MINI; Sheehan and Lecrubier, 2001–2005].
+Only patients who had failed to respond to at least
+two 8-week trials of antidepressant treatment, defined
+as failure to respond with >50% reduction in
+symptoms of depression, as measured by Montgomery–
+Asberg Depression Rating Scale [MADRS; Montgomery and Asberg, 1979] score 430 were
+included. Modified criteria from Thase and Rush
+[1997] were used to classify treatment-resistant depression
+(TRD): Grade 1, absence of response to one
+antidepressant; Grade 2, absence of response to two or
+more antidepressants, one of them from a different
+group; Grade 3, absence of response to combination
+and/or augmentation strategy; Grade 4, Grade 31
+absence of response to an irreversible monoamine
+oxidase inhibitor; Grade 5, Grade 31absence of
+response to electroconvulsive therapy (ECT; Table 1).
+All patients were rated as moderately to severely ill
+prior to the adjunctive treatment and functioning
+poorly, and three patients had also failed ECT and/or
+transcranial magnetic stimulation trials, as well as the
+antidepressants trials (Table 1). Patients with psychotic
+disorders, alcohol or drug abuse, and eating disorders
+were excluded, and all patients remained compliant
+with the adjuctive treatment of lamotrigine for at least
+6 months. Patients provided informed consent, approved
+by the University of Calgary Conjoint Scientific
+and Ethics Board.
+Lamotrigine was added to existing antidepressants,
+and the dose was titrated, according to clinical response
+and tolerance, with 25- to 50-mg increments every
+2 weeks, to a maximum dose of 200 mg/day.We recorded
+patients’ demographic data and scores of effectiveness
+measures completed prospectively in patients’ charts in
+follow-up visits for at least 6 months of adjuvant
+treatment. Efficacy measures included changes of the
+following scales at baseline (before adding lamotrigine),
+at 8 weeks, and at 6 months: the CGI-S
+[National Institute of Mental Health, 1970], as the
+primary efficacy measure, the MADRS, and the Global
+Assessment of Functioning Scale [GAF; Luborsky,
+1962]. We paired baseline measures, prior to adding
+lamotrigine, with those at 8 weeks and at 6 months
+after adding lamotrigine, utilizing a paired t-test.
+A qualified psychiatrist carried out ratings, and
+no interrater reliability measures were taken.
+Monitoring for skin rashes, headache, dizziness,
+somnolence, and gastrointestinal (GI) disturbances
+was carried out to assess tolerance to adjunctive
+treatments [Bowden et al., 2004]. Patients were
+instructed to stop the drug, and to report rashes
+immediately should they develop. All patients in
+follow-up visits were asked about headache, dizziness,
+somnolence, and insomnia, in addition to skin rashes.
+
+RESULTS
+Table 1 displays demographic variables, details of the
+current illness, and data on past failed biological
+treatment trials. Twelve patients (85.7%) completed
+the 6-month trial of the adjuvant treatment. Lamotrigine
+dosage ranged from 50 mg/day to 200 mg/day.
+At the time of adding lamotrigine, nine patients were
+on one antidepressant (citalopram or venlafaxine), and
+five patients were on two or more antidepressants. In
+addition to the significant improvement of the core
+symptoms of depressive symptomatology at 8 weeks
+and at 6 months, some patients had recognizable
+clinical improvement within the first 2 weeks (Table 2).
+On the primary efficacy measure at 6 months, there was
+at least a 1 point change, from moderately ill to mildly ill
+at week 8, and further improvement by 2 points, from
+mildly ill to borderline. At 6 months, four patients were
+very much improved, seven were much improved, one was
+minimally improved, and two displayed no change on the
+CGI Improvement (CGI-I) subscale. Two female
+patients discontinued lamotrigine at week 8: one due
+to the development of a scalp rash, which was not
+verified, and the other due to travel. These two patients
+did not report significant changes or improvements.
+Table 2 summarizes the efficacy measures findings.
+Occupational and Social Functioning: Eight patients
+returned to gainful employment and resumed regular
+leisure activities. For example, a 62-year-old male
+resumed playing hockey. A 55-year-old female who had
+suffered from nonremitting symptoms for 6 years, and who had failed an ECT trial and a recent trial of
+transcranial magnetic stimulation, reported robust
+mood improvement and relief of associated anxiety.
+A lawyer who had been nonfunctional for 4 years
+started part-time work.
+Tolerance: Reported side effects were generally mild
+and transient. Two patients reported mild drowsiness,
+somnolence, and decrease in sexual desire; one patient
+reported mild transient headaches and dizziness, and
+another complained of dry mouth and nervousness.
+One patient discontinued the treatments after 8 weeks
+due to the development of a scalp rash, which was not
+verified.
+
+DISCUSSION
+Lamotrigine may have antidepressant properties in
+patients with unipolar depression and may accelerate
+the onset of action when given in combination with
+atypical antidepressants. Large-scale, double-blind
+studies are critically needed to explore further the
+efficacy and tolerability of lamotrigine treatment in
+unipolar depression.
+Clinical Implications: Clinicians will (1) consider
+lamotrigine as an adjunct to antidepressants in TRD;
+(2) initiate large-scale, controlled trials to test lamotrigine’s
+efficacy and tolerability in unipolar depression;
+and (3) recognize that lamotrigine is generally a safe
+drug if patients are monitored carefully.
+Limitations: Limitations include small sample size,
+open design, and heterogeneous antidepressant
+that patients were taking at the time lamotrigine was
+added.
+
