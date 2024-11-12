@@ -1,0 +1,308 @@
+Introduction
+Major depressive disorder is a leading cause of
+disability worldwide and has been found to lower life
+satisfaction more than debt, divorce, and diabetes and to exacerbate comorbidities, including heart
+disease, anxiety, and cancer. Although people with
+major depressive disorder often respond well to drug
+treatments and psychotherapy, many are resistant to
+treatment. In addition, access to treatment for many
+people with depression is limited, with only 51%
+treatment coverage for high income countries and 20%
+for low and lower-middle income countries. More
+evidence based treatments are therefore needed.
+Exercise may be an effective complement or
+alternative to drugs and psychotherapy. In addition
+to mental health benefits, exercise also improves a
+range of physical and cognitive outcomes. Clinical
+practice guidelines in the US, UK, and Australia
+recommend physical activity as part of treatment for
+depression. But these guidelines do not provide
+clear, consistent recommendations about dose or
+exercise modality. British guidelines recommend
+group exercise programmes and offer general
+recommendations to increase any form of physical
+activity, the American Psychiatric Association
+recommends any dose of aerobic exercise or resistance
+training, and Australian and New Zealand guidelines suggest a combination of strength and vigorous aerobic
+exercises, with at least two or three bouts weekly. Authors of guidelines may find it hard to provide
+consistent recommendations on the basis of existing
+mainly pairwise meta-analyses—that is, assessing
+a specific modality versus a specific comparator in
+a distinct group of participants. These meta-analyses have come under scrutiny for pooling
+heterogeneous treatments and heterogenous
+comparisons leading to ambiguous effect estimates. Reviews also face the opposite problem, excluding
+exercise treatments such as yoga, tai chi, and qigong because grouping them with strength training might
+be inappropriate. Overviews of reviews have tried
+to deal with this problem by combining pairwise
+meta-analyses on individual treatments. A recent
+such overview found no differences between exercise
+modalities. Comparing effect sizes between different
+pairwise meta-analyses can also lead to confusion
+because of differences in analytical methods used
+between meta-analysis, such as choice of a control
+to use as the referent. Network meta-analyses
+are a better way to precisely quantify differences
+between interventions as they simultaneously model the direct and indirect comparisons between
+interventions. Network meta-analyses have been used to compare
+different types of psychotherapy and pharmacotherapy
+for depression. For exercise, they have shown that
+dose and modality influence outcomes for cognition, back pain, and blood pressure. Two network meta-analyses explored the effects of exercise on depression:
+one among older adults and the other for mental
+health conditions. Because of the inclusion criteria
+and search strategies used, these reviews might have
+been under-powered to explore moderators such as
+dose and modality (κ=15 and κ=71, respectively).
+To resolve conflicting findings in existing reviews,
+we comprehensively searched randomised trials on
+exercise for depression to ensure our review was
+adequately powered to identify the optimal dose and
+modality of exercise. For example, a large overview of
+reviews found effects on depression to be proportional
+to intensity, with vigorous exercise appearing to be
+better, but a later meta-analysis found no such
+effects. We explored whether recommendations
+differ based on participants’ sex, age, and baseline
+level of depression. Given the challenges presented by behaviour
+change in people with depression, we also identified
+autonomy support or behaviour change techniques
+that might improve the effects of intervention. Behaviour change techniques such as self-monitoring
+and action planning have been shown to influence the
+effects of physical activity interventions in adults (>18
+years) and older adults (>60 years) with differing
+effectiveness of techniques in different populations. We
+therefore tested whether any intervention components
+from the behaviour change technique taxonomy were
+associated with higher or lower intervention effects. Other meta-analyses found that physical activity
+interventions work better when they provide people
+with autonomy (eg, choices, invitational language).
+Autonomy is not well captured in the taxonomy for
+behaviour change technique. We therefore tested
+whether effects were stronger in studies that provided
+more autonomy support to patients. Finally, to
+understand the mechanism of intervention effects,
+such as self-confidence, affect, and physical fitness, we
+collated all studies that conducted formal mediation
+analyses.
+Methods.
+Our findings are presented according to the Preferred
+Reporting Items for Systematic Reviews and MetaAnalyses-Network Meta-analyses (PRISMA-NMA)
+guidelines (see supplementary file, section S0; all
+supplementary files, data, and code are also available
+at https://osf.io/nzw6u/). We amended our analysis
+strategy after registering our review; these changes
+were to better align with new norms established
+by the Cochrane Comparing Multiple Interventions
+Methods Group. These norms were introduced
+between the publication of our protocol and the
+preparation of this manuscript. The largest change was using the confidence in network meta-analysis
+(CINeMA) online tool instead of the Grading of
+Recommendations, Assessment, Development and
+Evaluation (GRADE) guidelines and adopting methods
+to facilitate assessments—for example, instead of
+using an omnibus test for all treatments, we assessed
+publication bias for each treatment compared with
+active controls. We also modelled acceptability
+(through dropout rate), which was not predefined but
+was adopted in response to a reviewer’s comment.
+Eligibility criteria.
+To be eligible for inclusion, studies had to be
+randomised controlled trials that included exercise as
+a treatment for depression and included participants
+who met the criteria for major depressive disorder,
+either clinician diagnosed or identified through
+participant self-report as exceeding established clinical
+thresholds (eg, scored >13 on the Beck depression
+inventory-II). Studies could meet these criteria
+when all the participants had depression or when the
+study reported depression outcomes for a subgroup of
+participants with depression at the start of the study.
+We defined exercise as “planned, structured
+and repetitive bodily movement done to improve
+or maintain one or more components of physical
+fitness.” Unlike recent reviews, we included
+studies with more than one exercise arm and
+multifaceted interventions (eg, health and exercise
+counselling) as long as they contained a substantial
+exercise component. These trials could be included
+because network meta-analysis methods allows for
+the grouping of those interventions into homogenous
+nodes. Unlike the most recent Cochrane review, we
+also included participants with physical comorbidities
+such as arthritis and participants with postpartum
+depression because the Diagnostic Statistical Manual
+of Mental Health Disorders, fifth edition, removed the
+postpartum onset specifier after that analysis was
+completed. Studies were excluded if interventions
+were shorter than one week, depression was not
+reported as an outcome, and data were insufficient to
+calculate an effect size for each arm. Any comparison
+condition was included, allowing us to quantify the
+effects against established treatments (eg, selective
+serotonin reuptake inhibitors (SSRIs), cognitive
+behavioural therapy), active control conditions (usual
+care, placebo tablet, stretching, educational control,
+and social support), or waitlist control conditions.
+Published and unpublished studies were included,
+with no restrictions on language applied.
+Information sources.
+We adapted the search strategy from the most recent
+Cochrane review, adding keywords for yoga, tai chi,
+and qigong, as they met our definition for exercise.
+We conducted database searches, without filters or
+date limits, in The Cochrane Library via CENTRAL,
+SPORTDiscus via Embase, and Medline, Embase, and
+PsycINFO via Ovid. We assessed
+full texts of all included studies from two systematic
+reviews of exercise for depression.
+Results.
+Study selection.
+The PRISMA flow diagram outlines the study selection
+process (fig 1). We used two previous reviews to identify
+potentially eligible studies for inclusion. Database
+searches identified 18658 possible studies. After
+5505 duplicates had been removed, two reviewers
+independently screened 13115 titles and abstracts.
+After screening, two reviewers independently reviewed
+1738 full text articles. Supplementary file section S2
+shows the consensus reasons for exclusion. A total
+of 218 unique studies described in 246 reports were
+included, totalling 495 arms and 14170 participants.
+Supplementary file section S3 lists the references and
+characteristics of the included studies.
+Discussion.
+Summary of evidence.
+In this systematic review and meta-analysis of
+randomised controlled trials, exercise showed
+moderate effects on depression compared with active controls, either alone or in combination with
+other established treatments such as cognitive
+behaviour therapy. In isolation, the most effective
+exercise modalities were walking or jogging, yoga,
+strength training, and dancing. Although walking
+or jogging were effective for both men and women,
+strength training was more effective for women,
+and yoga or qigong was more effective for men. Yoga
+was somewhat more effective among older adults,
+and strength training was more effective among younger people. The benefits from exercise tended
+to be proportional to the intensity prescribed, with
+vigorous activity being better. Benefits were equally
+effective for different weekly doses, for people with
+different comorbidities, or for different baseline levels
+of depression. Although confidence in many of the
+results was low, treatment guidelines may be overly
+conservative by conditionally recommending exercise
+as complementary or alternative treatment for patients
+in whom psychotherapy or pharmacotherapy is either
+ineffective or unacceptable. Instead, guidelines for
+depression ought to include prescriptions for exercise
+and consider adapting the modality to participants’
+characteristics and recommending more vigorous
+intensity exercises.
+Our review did not uncover clear causal
+mechanisms, but the trends in the data are useful for
+generating hypotheses. It is unlikely that any single
+causal mechanism explains all the findings in the
+review. Instead, we hypothesise that a combination
+of social interaction, mindfulness or experiential
+acceptance, increased self-efficacy, immersion in
+green spaces, neurobiological mechanisms, and
+acute positive affect combine to generate outcomes.
+Meta-analyses have found each of these factors to be
+associated with decreases in depressive symptoms,
+but no single treatment covers all mechanisms. Some
+may more directly promote mindfulness (eg, yoga),
+be more social (eg, group exercise), be conducted in
+green spaces (eg, walking), provide a more positive
+affect (eg, “runner’s high”’), or be more conducive to
+acute adaptations that may increase self-efficacy (eg,
+strength). Exercise modalities such as running may
+satisfy many of the mechanisms, but they are unlikely
+to directly promote the mindful self-awareness
+provided by yoga and qigong. Both these forms of
+exercise are often practised in groups with explicit
+mindfulness but seldom have fast and objective
+feedback loops that improve self-efficacy. Adequately
+powered studies testing multiple mediators may help
+to focus more on understanding why exercise helps
+depression and less on whether exercise helps. We
+argue that understanding these mechanisms of action
+is important for personalising prescriptions and better
+understanding effective treatments.
+Our review included more studies than many
+existing reviews on exercise for depression.
+As a result, we were able to combine the strengths
+of various approaches to exercise and to make more
+nuanced and precise conclusions. For example, even
+taking conservative estimates (ie, the least favourable
+end of the credible interval), practitioners can expect
+patients to experience clinically significant effects
+from walking, running, yoga, qigong, strength
+training, and mixed aerobic exercise. Because we
+simultaneously assessed more than 200 studies,
+credible intervals were narrower than those in most
+existing meta-analyses. We were also able to explore
+non-linear relationships between outcomes and
+moderators, such as frequency, intensity, and time.
+These analyses supported some existing findings—for
+example, our study and the study by Heissel et al
+found that shorter interventions had stronger effects,
+at least for six months; our study and the study by
+Singh et al both found that effects were stronger with
+vigorous intensity exercise compared with light and
+moderate exercise. However, most existing reviews
+found various treatment modalities to be equally
+effective. In our review, some types of exercise
+had stronger effect sizes than others. We attribute this
+to the study level data available in a network metaanalysis compared with an overview of reviews
+and higher power compared with meta-analyses with
+smaller numbers of included studies. Overviews of
+reviews have the ability to more easily cover a wider
+range of participants, interventions, and outcomes,
+but also risk double counting randomised trials that
+are included in separate meta-analyses. They often
+include heterogeneous studies without having as
+much control over moderation analyses (eg, Singh
+et al included studies covering both prevention
+and treatment). Some of those reviews grouped
+interventions such as yoga with heterogeneous
+interventions such as stretching and qigong. This
+practise of combining different interventions makes
+it harder to interpret meta-analytical estimates. We
+used methods that enabled us to separately analyse
+the effects of these treatment modalities. In so doing,
+we found that these interventions do have different
+effects, with yoga being an intervention with strong
+effects and stretching being better described as an
+active control condition. Network meta-analyses
+revealed the same phenomenon with psychotherapy:
+researchers once concluded there was a dodo bird
+verdict, whereby “everybody has won, and all must
+have prizes,” until network meta-analyses showed
+some interventions were robustly more effective than
+others.
+Conclusions.
+Depression imposes a considerable global burden.
+Many exercise modalities appear to be effective
+treatments, particularly walking or jogging, strength
+training, and yoga, but confidence in many of the
+findings was low. We found preliminary data that may
+help practitioners tailor interventions to individuals
+(eg, yoga for older men, strength training for younger
+women). The World Health Organization recommends
+physical activity for everyone, including those with
+chronic conditions and disabilities, but not everyone
+can access treatment easily. Many patients may
+have physical, psychological, or social barriers to
+participation. Still, some interventions with few costs,
+side effects, or pragmatic barriers, such as walking
+and jogging, are effective across people with different
+personal characteristics, severity of depression, and
+comorbidities. Those who are able may want to choose
+more intense exercise in a structured environment to
+further decrease depression symptoms. Health systems
+may want to provide these treatments as alternatives or
+adjuvants to other established interventions (cognitive
+behaviour therapy, SSRIs), while also attenuating
+risks to physical health associated with depression.
+Therefore, effective exercise modalities could be
+considered alongside those intervention as core
+treatments for depression.
