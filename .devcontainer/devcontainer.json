@@ -16,5 +16,5 @@
             }
         }
     },
-    "postCreateCommand": "pip install --no-cache-dir -r requirements.txt && python3 -m ipykernel install --user --name=codespaces --display-name 'Python 3.9 (Codespaces)'"
+    "postCreateCommand": "apt-get update && apt-get install -y libenchant-2-dev && pip install --no-cache-dir -r requirements.txt && python3 -m ipykernel install --user --name=codespaces --display-name 'Python 3.9 (Codespaces)'"
 }
