@@ -1,7 +1,7 @@
 #--extra-index-url https://download.pytorch.org/whl/torch_stable.html
 #-f https://download.pytorch.org/whl/torch_stable.html
 #torch==2.0.1+cpu
-torch==2.0.1+cpu -f https://download.pytorch.org/whl/torch_stable.html
+torch==2.1.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
 streamlit
 transformers
 pymupdf
@@ -16,3 +16,4 @@ ipykernel
 nltk
 pyenchant
 scikit-learn
+ipywidgets
