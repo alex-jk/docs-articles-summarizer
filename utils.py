@@ -149,3 +149,98 @@ def get_wordnet_pos(treebank_tag, token):
         return wordnet.ADV
     else:
         return wordnet.NOUN  # Default to noun if unsure
+
+def lemmatize_token(token, pos_tag):
+    # Get WordNet POS tag and lemmatize
+    wordnet_pos = get_wordnet_pos(pos_tag, token)
+    lemma = lemmatizer.lemmatize(token.lower(), pos=wordnet_pos)
+    return lemma
+
+def is_valid_word(valid_words, token, pos_tag):
+
+    if re.match(r'^\d+(\.\d+)?$', token):
+        return True
+    
+    # Check if the token is a Roman numeral
+    if re.match(r'^(?=[MDCLXVI])M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$', token):
+        return True
+
+    """Validate if token is a meaningful word or a valid hyphenated term."""
+    # Handle hyphenated words by checking each part separately
+    if '-' in token:
+        parts = token.split('-')
+        part_tags = nltk.pos_tag(parts)  # Tag each part separately
+        return all(is_valid_word(part, tag) for part, tag in part_tags)
+
+    lemma = lemmatize_token(token, pos_tag)
+    # print(f"\n lemma: {lemma}")
+    
+    # Validate as a single word
+    return lemma in valid_words or re.match(r'^[.,!?;_–-]$', token)
+
+contractions = {
+    "don't": "do not",
+    "can't": "cannot",
+    "won't": "will not",
+    "isn't": "is not",
+    "aren't": "are not",
+    "wasn't": "was not",
+    "weren't": "were not",
+    "hasn't": "has not",
+    "haven't": "have not",
+    "hadn't": "had not",
+    "doesn't": "does not",
+    "didn't": "did not",
+    "couldn't": "could not",
+    "shouldn't": "should not",
+    "wouldn't": "would not",
+    "mightn't": "might not",
+    "mustn't": "must not",
+    "n't": " not",  # catch-all for remaining "n't" forms
+}
+
+def expand_contractions(text):
+    """Replace contractions in text with their expanded forms."""
+    for contraction, replacement in contractions.items():
+        text = re.sub(r'\b' + contraction + r'\b', replacement, text)
+    return text
+
+def create_features_for_token(token, medical_terms):
+    token_df = pd.DataFrame({'word': [token]})
+    
+    # Apply the same feature creation logic
+    token_df['contains_number'] = token_df['word'].str.contains(r'\d').astype(int)
+    token_df['num_dashes'] = token_df['word'].str.count('-')
+    token_df['num_vowels'] = token_df['word'].str.count(r'[aeiouAEIOU]')
+    token_df['contains_non_alphanum'] = token_df['word'].str.contains(r'[^a-zA-Z0-9-]').astype(int)
+    token_df['contains_ine'] = token_df['word'].str.contains(r'ine', case=False).astype(int)
+
+    pos_tag = nltk.pos_tag([token])[0]
+    token_df['lemma'] = lemmatize_token(pos_tag[0], pos_tag[1])
+    token_df['is_real_word_enchant'] = token_df['lemma'].apply(is_in_enchant_dict).astype(int)
+
+    token_df['num_characters'] = token_df['word'].apply(len)
+    token_df['starts_with_letter'] = token_df['word'].apply(lambda x: int(bool(re.match(r'^[A-Za-z]', x))))
+    token_df['ends_with_letter'] = token_df['word'].apply(lambda x: int(bool(re.search(r'[A-Za-z]$', x))))
+
+    # Check for medical terms
+    token_df['contains_medical_term'] = token_df['word'].apply(lambda word: any(term in word for term in medical_terms)).astype(int)
+
+    # Return the feature row as a dictionary
+    return token_df.iloc[0].to_dict()
+
+def is_valid_word_with_model(token, pipeline, medical_terms):
+    # Extract features for the token
+    features = create_features_for_token(token, medical_terms)
+    
+    # Convert the features to the expected model input
+    feature_array = pd.DataFrame([features])[[
+        'contains_number', 'num_dashes', 'num_vowels', 
+        'contains_non_alphanum', 'contains_ine', 
+        'is_real_word_enchant', 'num_characters', 
+        'starts_with_letter', 'ends_with_letter',
+        'contains_medical_term'
+    ]].values
+    
+    # Predict using the logistic regression model
+    return pipeline.predict(feature_array)[0] == 1  # Assuming 1 means valid
