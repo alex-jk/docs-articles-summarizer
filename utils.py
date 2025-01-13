@@ -46,7 +46,7 @@ def preprocess_text(text):
     return cleaned_text
 
 # Summarize text function
-def summarize_text(text, min_length, max_length, prompts=None, print_num_tokens=False):
+def summarize_text(text, tokenizer, min_length, max_length, prompts=None, print_num_tokens=False):
     cleaned_text = preprocess_text(text)  # Preprocess the text
 
     tokenized_no_trunc = tokenizer(
@@ -89,7 +89,7 @@ def summarize_text(text, min_length, max_length, prompts=None, print_num_tokens=
     return summary
 
 # Function to summarize in chunks
-def split_text_into_chunks(text, max_length=1024):
+def split_text_into_chunks(text, tokenizer, max_length=1024):
     # Split the text into sentences
     sentences = nltk.sent_tokenize(text)
 
@@ -170,7 +170,7 @@ def is_valid_word(valid_words, token, pos_tag):
     if '-' in token:
         parts = token.split('-')
         part_tags = nltk.pos_tag(parts)  # Tag each part separately
-        return all(is_valid_word(part, tag) for part, tag in part_tags)
+        return all(is_valid_word(valid_words, part, tag) for part, tag in part_tags)
 
     lemma = lemmatize_token(token, pos_tag)
     # print(f"\n lemma: {lemma}")
@@ -244,3 +244,145 @@ def is_valid_word_with_model(token, pipeline, medical_terms):
     
     # Predict using the logistic regression model
     return pipeline.predict(feature_array)[0] == 1  # Assuming 1 means valid
+
+# clean summary function
+tokenizer_nltk = TreebankWordTokenizer()
+
+whitelist = {"pdd", "dsm-5", "dsm-iii", "ssri", "eg", "benzodiazepine", "benzodiazepines", "worldwide"} 
+
+def clean_summary(summary, pipeline, medical_terms):
+
+    expanded_summary = expand_contractions(summary)
+    # Tokenize the summary into words
+    # tokens = nltk.word_tokenize(summary)
+    tokens = tokenizer_nltk.tokenize(expanded_summary)
+    
+    # Get the POS tags for the tokens
+    pos_tags = nltk.pos_tag(tokens)
+
+    cleaned_tokens = []
+    for token, pos_tag in pos_tags:
+        # Check if the lemmatized form of the token is valid
+        # print(f"\n {token}")
+        if token.lower() in whitelist or is_valid_word(valid_words, token, pos_tag) or is_valid_word_with_model(token, pipeline, medical_terms):
+            cleaned_tokens.append(token)
+        else:
+            # Once gibberish or non-valid words appear, stop processing
+            break
+    
+    # Join the valid tokens back into a string
+    cleaned_summary = " ".join(cleaned_tokens).strip()
+    
+    # Ensure the summary ends with a full sentence
+    if cleaned_summary and cleaned_summary[-1] not in ".!?":
+        cleaned_summary += "."
+    
+    # If the summary is empty, return a fallback message or just an empty string
+    if not cleaned_summary:
+        cleaned_summary = "Summary could not be generated properly."
+
+    return cleaned_summary
+
+def summarize_long_text(text, min_length, max_length, prompts=None):
+    # Split the text into chunks of full sentences
+    chunks = split_text_into_chunks(text)
+
+    # Summarize each chunk individually and collect the results
+    summaries = []
+    for chunk in chunks:
+        # print("\n")
+        # print(chunk)
+        summary = summarize_text(chunk, min_length, max_length, prompts)  # Summarize each chunk
+        summary_clean = clean_summary(summary)
+        summaries.append(summary_clean)
+    
+    # Combine the individual summaries into a final summary
+    combined_summary = " ".join(summaries)
+
+    # Ensure the final summary ends with a full sentence
+    if combined_summary[-1] not in ".!?":
+        combined_summary = combined_summary.rsplit(" ", 1)[0] + "."
+
+    return combined_summary
+
+import pdfplumber
+
+def read_pdf_with_pdfplumber(file):
+    """Read and extract text from a PDF file using pdfplumber with positional data."""
+    text = ""
+    with pdfplumber.open(file) as pdf:
+        for page in pdf.pages:
+            # Use `extract_words` to get word positions and spacing information
+            words = page.extract_words()
+            page_text = ""
+
+            # Reconstruct text based on the word positions to handle missing spaces
+            for word in words:
+                # Use a space before the word if it's not the first word on the line
+                page_text += f" {word['text']}"
+            
+            text += page_text + "\n"  # Add newline to separate each page's content
+    return text
+
+def read_pdf_by_page(file):
+    """Read and extract text from a PDF file using pdfplumber, handling proper spacing between words."""
+    pages_text = []  # Store text for each page separately
+
+    with pdfplumber.open(file) as pdf:
+        for page_num, page in enumerate(pdf.pages):
+            words = page.extract_words()  # Extract words with positional data
+            page_text = ""
+
+            # Variables to track previous word's position for proper spacing
+            prev_x1 = 0  # End x-coordinate of the previous word
+            prev_top = 0  # y-coordinate of the previous word's top position
+
+            for word in words:
+                x0, y0, x1, y1 = word['x0'], word['top'], word['x1'], word['bottom']
+                word_text = word['text']
+
+                # If there's a gap between words on the same line, insert a space
+                if prev_x1 > 0 and (x0 - prev_x1) > 1 and abs(y0 - prev_top) < 5:
+                    page_text += " " + word_text
+                else:
+                    page_text += word_text
+
+                # Update previous word's x1 and top position for spacing logic
+                prev_x1 = x1
+                prev_top = y0
+
+            # Print text for each page as it's extracted (optional)
+            print(f"Extracted text for Page {page_num + 1}:\n", page_text, "\n" + "-" * 80)
+
+            # Append extracted text for each page separately
+            pages_text.append(page_text.strip())  # Strip leading/trailing spaces for each page
+
+    return pages_text
+
+def read_txt(file):
+    return file.read().decode("cp1252", errors='replace')
+
+def extract_relevant_sections(text, keyword="lamotrigine"):
+    """Extract paragraphs or sentences containing the keyword from the text."""
+    relevant_sections = []
+    for paragraph in text.split('\n'):
+        if keyword.lower() in paragraph.lower():
+            relevant_sections.append(paragraph)
+    return " ".join(relevant_sections)
+
+def count_tokens(text, tokenizer):
+    tokenized_text = tokenizer.encode(text, return_tensors="pt", truncation=False)
+    return tokenized_text.shape[1]  # Returns the number of tokens
+
+def get_non_identified_words(valid_words, file_content):
+    cleaned_text = preprocess_text(file_content)  # Preprocess the text
+    words = nltk.word_tokenize(cleaned_text)
+    words = [word.lower() for word in words]
+
+    # Tag each word with its part of speech
+    word_pos_tags = nltk.pos_tag(words)
+
+    # Collect words that are considered invalid
+    invalid_words = {word for word, pos in word_pos_tags if not is_valid_word(valid_words, word, pos)}
+
+    return list(invalid_words)
