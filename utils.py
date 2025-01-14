@@ -46,7 +46,7 @@ def preprocess_text(text):
     return cleaned_text
 
 # Summarize text function
-def summarize_text(text, tokenizer, min_length, max_length, prompts=None, print_num_tokens=False):
+def summarize_text(text, tokenizer, model, min_length, max_length, prompts=None, print_num_tokens=False):
     cleaned_text = preprocess_text(text)  # Preprocess the text
 
     tokenized_no_trunc = tokenizer(
@@ -230,27 +230,41 @@ def create_features_for_token(token, medical_terms):
     return token_df.iloc[0].to_dict()
 
 def is_valid_word_with_model(token, pipeline, medical_terms):
-    # Extract features for the token
     features = create_features_for_token(token, medical_terms)
     
-    # Convert the features to the expected model input
-    feature_array = pd.DataFrame([features])[[
-        'contains_number', 'num_dashes', 'num_vowels', 
-        'contains_non_alphanum', 'contains_ine', 
-        'is_real_word_enchant', 'num_characters', 
-        'starts_with_letter', 'ends_with_letter',
-        'contains_medical_term'
-    ]].values
+    print("TOKEN:", token)
+    print("FEATURES:", features)
+    print("TYPE:", type(features))
     
-    # Predict using the logistic regression model
-    return pipeline.predict(feature_array)[0] == 1  # Assuming 1 means valid
+    try:
+        df = pd.DataFrame([features])
+        print("DF COLUMNS:", df.columns)
+        
+        feature_array = df[[ 
+            'contains_number', 
+            'num_dashes', 
+            'num_vowels', 
+            'contains_non_alphanum', 
+            'contains_ine', 
+            'is_real_word_enchant', 
+            'num_characters', 
+            'starts_with_letter', 
+            'ends_with_letter', 
+            'contains_medical_term'
+        ]].values
+    except Exception as e:
+        print("ERROR on token:", token)
+        print("Exception:", e)
+        raise e  # or return False if you just want to skip
+
+    return pipeline.predict(feature_array)[0] == 1
 
 # clean summary function
 tokenizer_nltk = TreebankWordTokenizer()
 
 whitelist = {"pdd", "dsm-5", "dsm-iii", "ssri", "eg", "benzodiazepine", "benzodiazepines", "worldwide"} 
 
-def clean_summary(summary, pipeline, medical_terms):
+def clean_summary(summary, pipeline, medical_terms, valid_words):
 
     expanded_summary = expand_contractions(summary)
     # Tokenize the summary into words
