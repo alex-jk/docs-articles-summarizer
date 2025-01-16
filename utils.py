@@ -230,17 +230,16 @@ def create_features_for_token(token, medical_terms):
     return token_df.iloc[0].to_dict()
 
 def is_valid_word_with_model(token, pipeline, medical_terms):
+    # Extract features for the token
     features = create_features_for_token(token, medical_terms)
+
+    # Convert the features to a DataFrame
+    df = pd.DataFrame([features])
     
-    print("TOKEN:", token)
-    print("FEATURES:", features)
-    print("TYPE:", type(features))
-    
-    try:
-        df = pd.DataFrame([features])
-        print("DF COLUMNS:", df.columns)
-        
-        feature_array = df[[ 
+    # (Optional) If your pipeline expects exactly these 10 columns, 
+    # subset the DataFrame to those columns. Just *do not* call .values
+    df = df[
+        [
             'contains_number', 
             'num_dashes', 
             'num_vowels', 
@@ -251,18 +250,17 @@ def is_valid_word_with_model(token, pipeline, medical_terms):
             'starts_with_letter', 
             'ends_with_letter', 
             'contains_medical_term'
-        ]].values
-    except Exception as e:
-        print("ERROR on token:", token)
-        print("Exception:", e)
-        raise e  # or return False if you just want to skip
+        ]
+    ]
 
-    return pipeline.predict(feature_array)[0] == 1
+    # Now pass the *DataFrame* (not a NumPy array) directly to the pipeline
+    prediction = pipeline.predict(df)[0]  # logistic regression outputs 0 or 1
+    return prediction == 1
 
 # clean summary function
 tokenizer_nltk = TreebankWordTokenizer()
 
-whitelist = {"pdd", "dsm-5", "dsm-iii", "ssri", "eg", "benzodiazepine", "benzodiazepines", "worldwide"} 
+whitelist = {"pdd", "dsm-5", "dsm-iii", "ssri", "eg", "benzodiazepine", "benzodiazepines", "worldwide", "cochrane", "prisma-nma"} 
 
 def clean_summary(summary, pipeline, medical_terms, valid_words):
 
@@ -297,24 +295,40 @@ def clean_summary(summary, pipeline, medical_terms, valid_words):
 
     return cleaned_summary
 
-def summarize_long_text(text, min_length, max_length, prompts=None):
+def summarize_long_text(text, min_length, max_length, prompts=None, clean_chunks=True):
+    """
+    Splits the input text into chunks (by full sentences), then summarizes each chunk 
+    individually. Depending on `clean_chunks`, it either cleans each summary (with 
+    `clean_summary`) or leaves it as is.
+    
+    Args:
+        text (str): The text to be summarized.
+        min_length (int): The minimum length for each chunk's summary.
+        max_length (int): The maximum length for each chunk's summary.
+        prompts (optional): Additional prompts or context for summarization.
+        clean_chunks (bool): If True, clean each chunk's summary; else use raw summaries.
+
+    Returns:
+        str: The combined summary of all chunks.
+    """
     # Split the text into chunks of full sentences
     chunks = split_text_into_chunks(text)
 
     # Summarize each chunk individually and collect the results
     summaries = []
     for chunk in chunks:
-        # print("\n")
-        # print(chunk)
-        summary = summarize_text(chunk, min_length, max_length, prompts)  # Summarize each chunk
-        summary_clean = clean_summary(summary)
-        summaries.append(summary_clean)
+        summary = summarize_text(chunk, min_length, max_length, prompts)
+        
+        if clean_chunks:
+            summary = clean_summary(summary)
+
+        summaries.append(summary)
     
     # Combine the individual summaries into a final summary
     combined_summary = " ".join(summaries)
 
-    # Ensure the final summary ends with a full sentence
-    if combined_summary[-1] not in ".!?":
+    # Ensure the final summary ends with a full sentence or punctuation
+    if combined_summary and combined_summary[-1] not in ".!?":
         combined_summary = combined_summary.rsplit(" ", 1)[0] + "."
 
     return combined_summary
