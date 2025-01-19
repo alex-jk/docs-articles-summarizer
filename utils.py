@@ -275,7 +275,7 @@ def clean_summary(summary, pipeline, medical_terms, valid_words):
     cleaned_tokens = []
     for token, pos_tag in pos_tags:
         # Check if the lemmatized form of the token is valid
-        # print(f"\n {token}")
+        print(f"\n {token}")
         if token.lower() in whitelist or is_valid_word(valid_words, token, pos_tag) or is_valid_word_with_model(token, pipeline, medical_terms):
             cleaned_tokens.append(token)
         else:
@@ -295,7 +295,7 @@ def clean_summary(summary, pipeline, medical_terms, valid_words):
 
     return cleaned_summary
 
-def summarize_long_text(text, min_length, max_length, prompts=None, clean_chunks=True):
+def summarize_long_text(text, tokenizer, model, min_length, max_length, prompts=None, clean_chunks=True):
     """
     Splits the input text into chunks (by full sentences), then summarizes each chunk 
     individually. Depending on `clean_chunks`, it either cleans each summary (with 
@@ -312,12 +312,12 @@ def summarize_long_text(text, min_length, max_length, prompts=None, clean_chunks
         str: The combined summary of all chunks.
     """
     # Split the text into chunks of full sentences
-    chunks = split_text_into_chunks(text)
+    chunks = split_text_into_chunks(text, tokenizer)
 
     # Summarize each chunk individually and collect the results
     summaries = []
     for chunk in chunks:
-        summary = summarize_text(chunk, min_length, max_length, prompts)
+        summary = summarize_text(chunk, tokenizer, model, min_length, max_length, prompts=prompts)
         
         if clean_chunks:
             summary = clean_summary(summary)
